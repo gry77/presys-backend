@@ -1,0 +1,16 @@
+application:
+  datasource:
+    driverClassName: org.sqlite.JDBC
+    jdbcUrl: jdbc:sqlite:/Users/gerry/Documents/private/presys.db3
+    #    username: login
+    #    password: password
+    maximumPoolSize: 5
+    connectiontestquery: select 1
+#    dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+
+spring:
+  jpa:
+    database-platform: org.sqlite.hibernate.dialect.SQLiteDialect
+server:
+  servlet:
+    context-path: /presys

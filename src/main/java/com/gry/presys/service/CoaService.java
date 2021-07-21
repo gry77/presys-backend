@@ -2,7 +2,7 @@ package com.gry.presys.service;
 
 import com.gry.presys.constants.CacheConstants;
 import com.gry.presys.mapper.MasterDataMapper;
-import com.gry.presys.model.COAResponse;
+import com.gry.presys.model.COA;
 import com.gry.presys.repository.COARepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +22,7 @@ public class CoaService {
     MasterDataMapper masterDataMapper;
 
     @Cacheable(cacheNames = CacheConstants.CACHE_MASTER, key = "T(String).valueOf(#root.method.name)")
-    public COAResponse getAllCoa() {
+    public COA getAllCoa() {
         log.info("Getting All Chart of Account");
         return masterDataMapper.mapCOAFromDB(coaRepository.findAll());
     }

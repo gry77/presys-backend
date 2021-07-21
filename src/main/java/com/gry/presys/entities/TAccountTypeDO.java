@@ -11,17 +11,17 @@ import java.util.Collection;
 @Entity
 @Table(name = "T_ACCOUNT_TYPE", schema = "main")
 public class TAccountTypeDO {
-    private Short id;
+    private Long id;
     private String name;
     private Collection<TCoaDO> tCoasById;
 
     @Id
     @Column(name = "ID")
-    public Short getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(final Short id) {
+    public void setId(final Long id) {
         this.id = id;
     }
 

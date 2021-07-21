@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "T_COA", schema = "main")
 public class TCoaDO {
-    private Short id;
+    private Long id;
     private String code;
     private String name;
     private Short enabled;
@@ -20,11 +20,11 @@ public class TCoaDO {
 
     @Id
     @Column(name = "ID")
-    public Short getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(final Short id) {
+    public void setId(final Long id) {
         this.id = id;
     }
 

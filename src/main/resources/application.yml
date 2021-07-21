@@ -11,6 +11,7 @@ application:
 spring:
   jpa:
     database-platform: org.sqlite.hibernate.dialect.SQLiteDialect
+    open-in-view: false
 server:
   servlet:
     context-path: /presys

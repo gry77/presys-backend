@@ -9,11 +9,11 @@ import java.util.List;
 
 @Getter
 @Setter
-public class COAResponse implements Serializable {
+public class COA implements Serializable {
 
     private static final long serialVersionUID = -335517412988781432L;
 
-    public COAResponse(final List<ChartOfAccount> coaList) {
+    public COA(final List<ChartOfAccount> coaList) {
         this.coaList = coaList;
     }
 
